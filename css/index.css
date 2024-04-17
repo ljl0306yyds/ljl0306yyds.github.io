@@ -7773,7 +7773,7 @@ input#pic-link {
 
 /* heo 加载动画头像 */
 .loading-img {
-  background: url(https://tuchuang.voooe.cn/images/2023/01/02/avatar.webp)
+  background: url(https://web-talis-a.oss-cn-beijing.aliyuncs.com/img01.jpg)
     no-repeat center center;
   background-size: cover;
 }
@@ -8782,7 +8782,7 @@ span.card-clock-weather {
 #welcome-info {
   background: linear-gradient(45deg, #b9f4f3, #e3fbf9);
   border-radius: 18px;
-  padding: 8px 8px;
+  padding: 8px;
 }
 [data-theme="dark"] #welcome-info {
   background: #212121;
@@ -8847,6 +8847,7 @@ span.card-clock-weather {
   margin-top: 10px;
 }
 
+/* 按钮背景颜色等 */
 .btn-xz {
   display: block;
   background-color: var(--btn-bg);
