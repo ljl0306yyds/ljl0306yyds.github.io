@@ -151,6 +151,48 @@
   </entry>
   
   <entry>
+    <title>算法</title>
+    <link href="https://ljl0306yyds.github.io/posts/1e7ff688.html"/>
+    <id>https://ljl0306yyds.github.io/posts/1e7ff688.html</id>
+    <published>2022-03-17T10:19:03.000Z</published>
+    <updated>2024-04-17T14:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>算法思维培养</h1><h2 id="算法题收集">算法题收集</h2><p>1.给你一个数组 <code>nums</code> 和一个值 <code>val</code>，你需要 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a></strong> 移除所有数值等于 <code>val</code> 的元素，并返回移除后数组的新长度。不要使用额外的数组空间，你必须仅使用 <code>O(1)</code> 额外空间并 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地 </a>修改输入数组</strong>。元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//双指针模型</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">//private int[] nums = &#123;3,2,2,3&#125;;</span></span><br><span class="line">    <span class="comment">//private int val = 3;</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (right &lt; nums.length)&#123;</span><br><span class="line">         <span class="keyword">if</span> (nums[right] == val) &#123;</span><br><span class="line">         right++;</span><br><span class="line">         <span class="keyword">continue</span>;      </span><br><span class="line">         &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">             nums[left] = nums[right];</span><br><span class="line">             left++;</span><br><span class="line">             &#125;</span><br><span class="line">         right++;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">return</span> left;   </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">算法题总结以及思路培养</summary>
+    
+    
+    
+    <category term="算法之路" scheme="https://ljl0306yyds.github.io/categories/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/"/>
+    
+    
+    <category term="算法" scheme="https://ljl0306yyds.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谈天说地</title>
+    <link href="https://ljl0306yyds.github.io/posts/93c91d94.html"/>
+    <id>https://ljl0306yyds.github.io/posts/93c91d94.html</id>
+    <published>2022-03-17T10:19:03.000Z</published>
+    <updated>2024-04-17T14:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我是帅哥</p>]]></content>
+    
+    
+    <summary type="html">简单描述个人看法，包括各个方面</summary>
+    
+    
+    
+    <category term="谈天说地" scheme="https://ljl0306yyds.github.io/categories/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0/"/>
+    
+    
+    <category term="谈天说地" scheme="https://ljl0306yyds.github.io/tags/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>谈谈Redis</title>
     <link href="https://ljl0306yyds.github.io/posts/2a063794.html"/>
     <id>https://ljl0306yyds.github.io/posts/2a063794.html</id>
@@ -189,48 +231,6 @@
     
     
     <category term="面试" scheme="https://ljl0306yyds.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>谈天说地</title>
-    <link href="https://ljl0306yyds.github.io/posts/93c91d94.html"/>
-    <id>https://ljl0306yyds.github.io/posts/93c91d94.html</id>
-    <published>2022-03-17T10:19:03.000Z</published>
-    <updated>2024-04-17T14:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>我是帅哥</p>]]></content>
-    
-    
-    <summary type="html">简单描述个人看法，包括各个方面</summary>
-    
-    
-    
-    <category term="谈天说地" scheme="https://ljl0306yyds.github.io/categories/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0/"/>
-    
-    
-    <category term="谈天说地" scheme="https://ljl0306yyds.github.io/tags/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>算法</title>
-    <link href="https://ljl0306yyds.github.io/posts/1e7ff688.html"/>
-    <id>https://ljl0306yyds.github.io/posts/1e7ff688.html</id>
-    <published>2022-03-17T10:19:03.000Z</published>
-    <updated>2024-04-17T14:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1>算法思维培养</h1><h2 id="算法题收集">算法题收集</h2><p>1.给你一个数组 <code>nums</code> 和一个值 <code>val</code>，你需要 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a></strong> 移除所有数值等于 <code>val</code> 的元素，并返回移除后数组的新长度。不要使用额外的数组空间，你必须仅使用 <code>O(1)</code> 额外空间并 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地 </a>修改输入数组</strong>。元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//双指针模型</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">//private int[] nums = &#123;3,2,2,3&#125;;</span></span><br><span class="line">    <span class="comment">//private int val = 3;</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (right &lt; nums.length)&#123;</span><br><span class="line">         <span class="keyword">if</span> (nums[right] == val) &#123;</span><br><span class="line">         right++;</span><br><span class="line">         <span class="keyword">continue</span>;      </span><br><span class="line">         &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">             nums[left] = nums[right];</span><br><span class="line">             left++;</span><br><span class="line">             &#125;</span><br><span class="line">         right++;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">return</span> left;   </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">算法题总结以及思路培养</summary>
-    
-    
-    
-    <category term="算法之路" scheme="https://ljl0306yyds.github.io/categories/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/"/>
-    
-    
-    <category term="算法" scheme="https://ljl0306yyds.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
