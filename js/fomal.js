@@ -945,7 +945,7 @@ function createtime2() {
   setTimeout(
     console.warn.bind(
       console,
-      "%c ⚡ Powered by Fomalhaut🥝 %c 你正在访问iTddey🥝の小家",
+      "%c ⚡ Powered by iTddey🥝 %c 你正在访问iTddey🥝の小家",
       "color:white; background-color:#f0ad4e",
       ""
     )
