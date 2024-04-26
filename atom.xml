@@ -84,29 +84,6 @@
   </entry>
   
   <entry>
-    <title>CentOS部署RabbitMQ</title>
-    <link href="https://blog.itddey.asia/posts/17ff1682.html"/>
-    <id>https://blog.itddey.asia/posts/17ff1682.html</id>
-    <published>2024-01-15T10:00:00.000Z</published>
-    <updated>2024-04-24T14:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1>RabbitMQ部署指南</h1><h1>1.单机部署</h1><p>我们在Centos7虚拟机中使用Docker来安装。</p><h2 id="1-1-下载镜像">1.1.下载镜像</h2><p>方式一：在线拉取</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull rabbitmq:3-management</span><br></pre></td></tr></table></figure><p>方式二：从本地加载</p><p>在课前资料已经提供了镜像包：</p><p><img src="assets/image-20210423191210349.png" alt="image-20210423191210349"></p><p>上传到虚拟机中后，使用命令加载镜像即可：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker load -i mq.tar</span><br></pre></td></tr></table></figure><h2 id="1-2-安装MQ">1.2.安装MQ</h2><p>执行下面的命令来运行MQ容器：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line"> -e RABBITMQ_DEFAULT_USER=iTddey \</span><br><span class="line"> -e RABBITMQ_DEFAULT_PASS=123321 \</span><br><span class="line"> --name mq \</span><br><span class="line"> --hostname mq1 \</span><br><span class="line"> -p 15672:15672 \</span><br><span class="line"> -p 5672:5672 \</span><br><span class="line"> -d \</span><br><span class="line"> rabbitmq:latest</span><br></pre></td></tr></table></figure><h1>2.集群部署</h1><p>接下来，我们看看如何安装RabbitMQ的集群。</p><h2 id="2-1-集群分类">2.1.集群分类</h2><p>在RabbitMQ的官方文档中，讲述了两种集群的配置方式：</p><ul><li>普通模式：普通模式集群不进行数据同步，每个MQ都有自己的队列、数据信息（其它元数据信息如交换机等会同步）。例如我们有2个MQ：mq1，和mq2，如果你的消息在mq1，而你连接到了mq2，那么mq2会去mq1拉取消息，然后返回给你。如果mq1宕机，消息就会丢失。</li><li>镜像模式：与普通模式不同，队列会在各个mq的镜像节点之间同步，因此你连接到任何一个镜像节点，均可获取到消息。而且如果一个节点宕机，并不会导致数据丢失。不过，这种方式增加了数据同步的带宽消耗。</li></ul><p>我们先来看普通模式集群。</p><h2 id="2-2-设置网络">2.2.设置网络</h2><p>首先，我们需要让3台MQ互相知道对方的存在。</p><p>分别在3台机器中，设置 /etc/hosts文件，添加如下内容：</p><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">192.168.150.101</span> mq1</span><br><span class="line"><span class="number">192.168.150.102</span> mq2</span><br><span class="line"><span class="number">192.168.150.103</span> mq3</span><br></pre></td></tr></table></figure><p>并在每台机器上测试，是否可以ping通对方：</p>]]></content>
-    
-    
-    <summary type="html">单点以及集群部署RabbitMQ教程</summary>
-    
-    
-    
-    <category term="微服务" scheme="https://blog.itddey.asia/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-    
-    <category term="微服务" scheme="https://blog.itddey.asia/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-    <category term="RabbitMQ" scheme="https://blog.itddey.asia/tags/RabbitMQ/"/>
-    
-  </entry>
-  
-  <entry>
     <title>部署elasticsearch</title>
     <link href="https://blog.itddey.asia/posts/5b9a0ff1.html"/>
     <id>https://blog.itddey.asia/posts/5b9a0ff1.html</id>
@@ -130,25 +107,25 @@
   </entry>
   
   <entry>
-    <title>八股文总结</title>
-    <link href="https://blog.itddey.asia/posts/4ff17a5f.html"/>
-    <id>https://blog.itddey.asia/posts/4ff17a5f.html</id>
-    <published>2022-03-17T10:19:03.000Z</published>
-    <updated>2024-04-17T14:00:00.000Z</updated>
+    <title>CentOS部署RabbitMQ</title>
+    <link href="https://blog.itddey.asia/posts/17ff1682.html"/>
+    <id>https://blog.itddey.asia/posts/17ff1682.html</id>
+    <published>2024-01-15T10:00:00.000Z</published>
+    <updated>2024-04-24T14:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>我是帅哥</p>]]></content>
-    
-    
-    <summary type="html">八股文总结</summary>
+    <content type="html"><![CDATA[<h1>RabbitMQ部署指南</h1><h1>1.单机部署</h1><p>我们在Centos7虚拟机中使用Docker来安装。</p><h2 id="1-1-下载镜像">1.1.下载镜像</h2><p>方式一：在线拉取</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull rabbitmq:3-management</span><br></pre></td></tr></table></figure><p>方式二：从本地加载</p><p>在课前资料已经提供了镜像包：</p><p><img src="assets/image-20210423191210349.png" alt="image-20210423191210349"></p><p>上传到虚拟机中后，使用命令加载镜像即可：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker load -i mq.tar</span><br></pre></td></tr></table></figure><h2 id="1-2-安装MQ">1.2.安装MQ</h2><p>执行下面的命令来运行MQ容器：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line"> -e RABBITMQ_DEFAULT_USER=iTddey \</span><br><span class="line"> -e RABBITMQ_DEFAULT_PASS=123321 \</span><br><span class="line"> --name mq \</span><br><span class="line"> --hostname mq1 \</span><br><span class="line"> -p 15672:15672 \</span><br><span class="line"> -p 5672:5672 \</span><br><span class="line"> -d \</span><br><span class="line"> rabbitmq:latest</span><br></pre></td></tr></table></figure><h1>2.集群部署</h1><p>接下来，我们看看如何安装RabbitMQ的集群。</p><h2 id="2-1-集群分类">2.1.集群分类</h2><p>在RabbitMQ的官方文档中，讲述了两种集群的配置方式：</p><ul><li>普通模式：普通模式集群不进行数据同步，每个MQ都有自己的队列、数据信息（其它元数据信息如交换机等会同步）。例如我们有2个MQ：mq1，和mq2，如果你的消息在mq1，而你连接到了mq2，那么mq2会去mq1拉取消息，然后返回给你。如果mq1宕机，消息就会丢失。</li><li>镜像模式：与普通模式不同，队列会在各个mq的镜像节点之间同步，因此你连接到任何一个镜像节点，均可获取到消息。而且如果一个节点宕机，并不会导致数据丢失。不过，这种方式增加了数据同步的带宽消耗。</li></ul><p>我们先来看普通模式集群。</p><h2 id="2-2-设置网络">2.2.设置网络</h2><p>首先，我们需要让3台MQ互相知道对方的存在。</p><p>分别在3台机器中，设置 /etc/hosts文件，添加如下内容：</p><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">192.168.150.101</span> mq1</span><br><span class="line"><span class="number">192.168.150.102</span> mq2</span><br><span class="line"><span class="number">192.168.150.103</span> mq3</span><br></pre></td></tr></table></figure><p>并在每台机器上测试，是否可以ping通对方：</p>]]></content>
     
     
+    <summary type="html">单点以及集群部署RabbitMQ教程</summary>
     
-    <category term="八股文" scheme="https://blog.itddey.asia/categories/%E5%85%AB%E8%82%A1%E6%96%87/"/>
     
     
-    <category term="Java" scheme="https://blog.itddey.asia/tags/Java/"/>
+    <category term="微服务" scheme="https://blog.itddey.asia/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
-    <category term="八股文" scheme="https://blog.itddey.asia/tags/%E5%85%AB%E8%82%A1%E6%96%87/"/>
+    
+    <category term="微服务" scheme="https://blog.itddey.asia/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+    <category term="RabbitMQ" scheme="https://blog.itddey.asia/tags/RabbitMQ/"/>
     
   </entry>
   
@@ -170,6 +147,29 @@
     
     
     <category term="Java" scheme="https://blog.itddey.asia/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>八股文总结</title>
+    <link href="https://blog.itddey.asia/posts/4ff17a5f.html"/>
+    <id>https://blog.itddey.asia/posts/4ff17a5f.html</id>
+    <published>2022-03-17T10:19:03.000Z</published>
+    <updated>2024-04-17T14:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我是帅哥</p>]]></content>
+    
+    
+    <summary type="html">八股文总结</summary>
+    
+    
+    
+    <category term="八股文" scheme="https://blog.itddey.asia/categories/%E5%85%AB%E8%82%A1%E6%96%87/"/>
+    
+    
+    <category term="Java" scheme="https://blog.itddey.asia/tags/Java/"/>
+    
+    <category term="八股文" scheme="https://blog.itddey.asia/tags/%E5%85%AB%E8%82%A1%E6%96%87/"/>
     
   </entry>
   
@@ -285,27 +285,6 @@
   </entry>
   
   <entry>
-    <title>算法</title>
-    <link href="https://blog.itddey.asia/posts/1e7ff688.html"/>
-    <id>https://blog.itddey.asia/posts/1e7ff688.html</id>
-    <published>2022-03-17T10:19:03.000Z</published>
-    <updated>2024-04-17T14:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1>算法思维培养</h1><h2 id="算法题收集">算法题收集</h2><p>1.给你一个数组 <code>nums</code> 和一个值 <code>val</code>，你需要 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a></strong> 移除所有数值等于 <code>val</code> 的元素，并返回移除后数组的新长度。不要使用额外的数组空间，你必须仅使用 <code>O(1)</code> 额外空间并 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地 </a>修改输入数组</strong>。元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//双指针模型</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">//private int[] nums = &#123;3,2,2,3&#125;;</span></span><br><span class="line">    <span class="comment">//private int val = 3;</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (right &lt; nums.length)&#123;</span><br><span class="line">         <span class="keyword">if</span> (nums[right] == val) &#123;</span><br><span class="line">         right++;</span><br><span class="line">         <span class="keyword">continue</span>;      </span><br><span class="line">         &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">             nums[left] = nums[right];</span><br><span class="line">             left++;</span><br><span class="line">             &#125;</span><br><span class="line">         right++;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">return</span> left;   </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">算法题总结以及思路培养</summary>
-    
-    
-    
-    <category term="算法之路" scheme="https://blog.itddey.asia/categories/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/"/>
-    
-    
-    <category term="算法" scheme="https://blog.itddey.asia/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>谈天说地</title>
     <link href="https://blog.itddey.asia/posts/93c91d94.html"/>
     <id>https://blog.itddey.asia/posts/93c91d94.html</id>
@@ -323,6 +302,27 @@
     
     
     <category term="谈天说地" scheme="https://blog.itddey.asia/tags/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法</title>
+    <link href="https://blog.itddey.asia/posts/1e7ff688.html"/>
+    <id>https://blog.itddey.asia/posts/1e7ff688.html</id>
+    <published>2022-03-17T10:19:03.000Z</published>
+    <updated>2024-04-17T14:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>算法思维培养</h1><h2 id="算法题收集">算法题收集</h2><p>1.给你一个数组 <code>nums</code> 和一个值 <code>val</code>，你需要 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a></strong> 移除所有数值等于 <code>val</code> 的元素，并返回移除后数组的新长度。不要使用额外的数组空间，你必须仅使用 <code>O(1)</code> 额外空间并 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地 </a>修改输入数组</strong>。元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//双指针模型</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">//private int[] nums = &#123;3,2,2,3&#125;;</span></span><br><span class="line">    <span class="comment">//private int val = 3;</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (right &lt; nums.length)&#123;</span><br><span class="line">         <span class="keyword">if</span> (nums[right] == val) &#123;</span><br><span class="line">         right++;</span><br><span class="line">         <span class="keyword">continue</span>;      </span><br><span class="line">         &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">             nums[left] = nums[right];</span><br><span class="line">             left++;</span><br><span class="line">             &#125;</span><br><span class="line">         right++;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">return</span> left;   </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">算法题总结以及思路培养</summary>
+    
+    
+    
+    <category term="算法之路" scheme="https://blog.itddey.asia/categories/%E7%AE%97%E6%B3%95%E4%B9%8B%E8%B7%AF/"/>
+    
+    
+    <category term="算法" scheme="https://blog.itddey.asia/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
