@@ -29,6 +29,56 @@
     
     
     <entry>
+      <title>谈谈Redis</title>
+      <link href="/posts/2a063794.html"/>
+      <url>/posts/2a063794.html</url>
+      
+        <content type="html"><![CDATA[<p>我是帅哥</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Redis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>算法</title>
+      <link href="/posts/1e7ff688.html"/>
+      <url>/posts/1e7ff688.html</url>
+      
+        <content type="html"><![CDATA[<h1>算法思维培养</h1><h2 id="算法题收集">算法题收集</h2><p>1.给你一个数组 <code>nums</code> 和一个值 <code>val</code>，你需要 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a></strong> 移除所有数值等于 <code>val</code> 的元素，并返回移除后数组的新长度。不要使用额外的数组空间，你必须仅使用 <code>O(1)</code> 额外空间并 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地 </a>修改输入数组</strong>。元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//双指针模型</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">//private int[] nums = &#123;3,2,2,3&#125;;</span></span><br><span class="line">    <span class="comment">//private int val = 3;</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (right &lt; nums.length)&#123;</span><br><span class="line">         <span class="keyword">if</span> (nums[right] == val) &#123;</span><br><span class="line">         right++;</span><br><span class="line">         <span class="keyword">continue</span>;      </span><br><span class="line">         &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">             nums[left] = nums[right];</span><br><span class="line">             left++;</span><br><span class="line">             &#125;</span><br><span class="line">         right++;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">return</span> left;   </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法之路 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Centos7安装Docker教程</title>
       <link href="/posts/d17f223a.html"/>
       <url>/posts/d17f223a.html</url>
@@ -137,6 +187,31 @@
     
     
     <entry>
+      <title>关于微服务</title>
+      <link href="/posts/1e7ff688.html"/>
+      <url>/posts/1e7ff688.html</url>
+      
+        <content type="html"><![CDATA[<p>我是帅哥</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 微服务 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 微服务 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Spring全家桶总揽</title>
       <link href="/posts/1e7ff688.html"/>
       <url>/posts/1e7ff688.html</url>
@@ -168,48 +243,23 @@
     
     
     <entry>
-      <title>关于微服务</title>
-      <link href="/posts/1e7ff688.html"/>
-      <url>/posts/1e7ff688.html</url>
+      <title>面试题总结</title>
+      <link href="/posts/a80ea308.html"/>
+      <url>/posts/a80ea308.html</url>
       
-        <content type="html"><![CDATA[<p>我是帅哥</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="面试之道">面试之道</h2><h3 id="项目相关">项目相关</h3><h4 id="详细说明你的项目">详细说明你的项目</h4><blockquote><p>从以下几个方面进行项目介绍<br>1、项目的背景，包括:是自研还是外包、什么业务、服务的客户群是谁、谁去运营等问题<br>2、项目的业务流程<br>3、项目的功能模块<br>4、项目的技术架构<br>5、个人工作职责<br>6、个人负责模块的详细说明，包括模块的设计，所用到的技术，技术的实现方案等</p></blockquote><p>案例：</p><p>我最近参与的项目是我们公司自研的专门针对成人职业技能教育的网络课堂系统，网站提供了成人职业技能培训的相关课程，如:软件开发培训、职业资格证书培训、成人学历教育培训等课程。项目基于B2B2C的业务模式，培训机构可以在平台入驻、发布课程，我们公司作为运营方由专门的人员对发布的课程进行审核，审核通过后课程才可以发布成功，课程包括免费和收费两种形式，对于免费课程普通用户可以直接选课学习，对于收课程在选课后需要支付成功才可以继续学习。<br>本项目包括三个端:用户端(学生端)、机构端、运营端。<br>核心模块包括:内容管理、媒资管理、课程搜索、订单支付、选课管理、认证授权等。<br>本项目采用前后端分离架构，后端采用SpringBoot、springCloud技术栈开发，数据库使用了MySQL，还使用的Redis、消息队列、分布式文件系统、Elasticsearch等中间件系统。<br>划分的微服务包括:内容管理服务、媒资管理服务、搜索服务、订单支付服务、学习中心服务、系统管理服务认证授权服务、网关服务、注册中心服务、配置中心服务等。<br>我在这个项目中负责了内容管理、媒资管理、订单支付模块的设计与开发。</p><p>内容管理模块，是对平台上的课程进行管理，课程的相关信息比较多这里在数据库设计了课程基本信息表、课程营销表、课程计划、课程师资表进行存储，培训机构要发布一门课程需要填写课程基本信息、课程营销信息、课程计划信息、课程师资信息，填写完毕后需要提交审核，由运营人员进行课程信息的审核，整个审核过程是程序自动审核加人工确认的方式，通常24小时审核完成。课程审核通过即可发布课程，课程的相关信息会聚合到课程发布表中，这里不仅要将课程信息写到课程发布表还要将课程信息写到索引库、分布式文件系统中，所以这里存在分布式事务的问题，项目使用本地消息表加任务调度的方式去解决这里的分布式事务，保存数据的最终一致性。</p><h4 id="你的项目流程是什么">你的项目流程是什么</h4><ol><li>产品人员设计产品原型。</li><li>讨论需求。</li><li>分模块设计接口。</li><li>出接口文档。</li><li>将接口文档给到前端人员，前后端分离开发。</li><li>开发完毕进行测试。</li><li>测试完毕发布项目，由运维人员进行部署安装。</li></ol><h3 id="Git">Git</h3><h4 id="Git代码冲突怎么处理">Git代码冲突怎么处理</h4><p>我们在使用Git时难免会出现代码冲突的问题，出现冲突的原因是因为当本地文件的版本与目标分支中文件的版本不一致时当存在同一行的内容不同时在进行合并时会出现冲突。<br>代码冲突一般发生在以下情况:<br>1、多个分支向主分支合并时<br>2、同一个分支下pull或push操作时。</p><p>不使用图形化界面工具，我们要手动合并文件的内容，确定最终的版本</p><h4 id="你是在哪个开发分支">你是在哪个开发分支</h4><p>我们不是直接在主分支开发，由技术经理创建独立的开发分支，我们是在独立的开发分支中进行开发，最后由技术经理将开发分支合并到主分支。</p><h3 id="maven">maven</h3><h4 id="maven常用命令">maven常用命令</h4><ul><li>mvn clean //清除target目录中的生成结果</li><li>mvn compile //编译源代码</li><li>mvn test //执行单元测试</li><li>mvn package //打包</li><li>mvn install //打包并把打好的包上传到本地仓库</li><li>mvn deploy //打包并把打好的包上传到远程仓库</li></ul><h4 id="maven依赖版本冲突如何处理">maven依赖版本冲突如何处理</h4><p>maven依赖版本冲突一般是由于间接依赖导致一个jar包即有多个不同的版本，比如:A依赖了B的1.0版本，C依赖了B的2.0版本，项目依赖A和C从而间接依赖了B的1.0和2.0版本，此时B有两个版本引入到了项目中，当存在版本冲突时可能会出现ClassNotFoundException、NoSuchMethodError等错误。<br>处理版本冲突可以使用以下方法:<br>1、使用exclusions 排除依赖<br>比如:我们只依赖B的1.0版本，此时可以在依赖C时排除对B的依赖。<br>2、使用dependencyManagement锁定版本号。<br>通常在父工程对依赖的版本统一管理。<br>比如:我们只依赖B的1.0版本，此时可以在父工程中限定B的版本为1.0。</p><h3 id="Mysql">Mysql</h3><h4 id="mysql常见的存储引擎以及区别">mysql常见的存储引擎以及区别</h4><p>一、InnoDB</p><ol><li>支持事务。</li><li>使用的锁粒度默认为行级锁，可以支持更高的并发;也支持表锁。</li><li>支持外键约束;外键约束其实降低了表的查询速度，增加了表之间的耦合度。</li></ol><p>二、MyISAM</p><ol><li>不提供事务支持</li><li>只支持表级锁</li><li>不支持外键</li></ol><p>三、memory</p><ol><li>数据存储在内存中</li></ol><p>总结:</p><ul><li><p>MyISAM管理非事务表，提供高速存储和检索以及全文搜索能力，如果在应用中执行大量select操作，应该选择MyISAMM</p></li><li><p>InnoDB用于事务处理，具有ACID事务支持等特性，如果在应用中执行大量insert和update操作，应该选择InnoDB</p></li></ul><h4 id="mysql建表时要注意哪些">mysql建表时要注意哪些</h4><p>MySQL建表的经验有很多，下边列举一些:</p><ol><li>注意选择存储引擎，如果要支持事务需要选择InnoDB。</li><li>注意字段类型的选择，对于日期类型如果要记录时分秒建议使用datetime，只记录年月日使用date类型，对于字符类型的选择，固定长度字段选择char，不固定长度的字段选择varchar，varchar比char节省空间但速度没有char快;对于内容介绍类的长广文本字段使用text或longtext类型;如果存储图片等二进制数据使用blob或longblob类型;对金额字段建议使用DECIMAL;对于数值类型的字段在确保取值范围足够的前提下尽量使用占用空间较小的类型，</li><li>主键字段建议使用自然主键，不要有业务意义，建议使用int unsigned类型，特殊场景使用bigint类型。</li><li>如果要存储text、blob字段建议单独建一张表，使用外键关联。</li><li>尽量不要定义外键，保证表的独立性，可以存在外键意义的字段。</li><li>设置字段默认值，比如:状态、创建时间等。</li><li>每个字段写清楚注释。</li><li>注意字段的约束，比如:非空、唯一、主键等</li></ol><h3 id="Spring-boot">Spring boot</h3><h4 id="springBoot接口开发的常用注解有哪些">springBoot接口开发的常用注解有哪些?</h4><ul><li>@Controller 标记此类是一个控制器，可以返回视图解析器指定的html页面，通过@ResponseBody可以将结果返回json、xml数据。</li><li>@RestController相当于@ResponseBody加 @Controler，实现rest接口开发，返回json数据，不能返回html页面。</li><li>@RequestMapping定义接口地址，可以标记在类上也可以标记在方法上，支持http的post、put、get等方法。</li><li>@PostMapping定义post接口，只能标记在方法上，用于添加记录，复杂条件的查询接口。</li><li>@GetMapping定义get接口，只能标记在方法上，用于查询接口的定义。</li><li>@PutMapping定义put接口，只能标记在方法上，用于修改接口的定义。</li><li>@DeleteMapping定义delete接口，只能标记在方法上，用于除接口的定义。</li><li>@RequestBody定义在方法上，用于将json串转成java对象。</li><li>@PathVarible 接收请求路径中占位符的值.</li><li>@ApiOperation swagger注解，对接口方法进行说明。</li><li>@Api wagger注解，对接口类进行说明。</li><li>@Autowired 基于类型注入。</li><li>@Resourc基于名称注入，如果基于名称注入失败转为基于类型注入。</li></ul>]]></content>
       
       
       <categories>
           
-          <category> 微服务 </category>
+          <category> 面试题 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 微服务 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Java基础</title>
-      <link href="/posts/a03a840d.html"/>
-      <url>/posts/a03a840d.html</url>
-      
-        <content type="html"><![CDATA[<h1>Java基础</h1><h2 id="面向对象">面向对象</h2><ul><li>所谓的面向对象，其实就是分析问题时，以问题所涉及到的事或物为中心的分析方式<br>类和对象:</li><li>类表示归纳和整理</li><li>对象就表示具体的事物</li></ul><h3 id="类的创建过程">类的创建过程</h3><ul><li>先声明类</li><li>创建对象</li><li>声明网性，所说的属性其实就是类中的变最变航类型变航名称 =变值属性类型性名称 = 属性値</li><li>声明方法</li><li>void 方法名(参数){ 功能代码 }</li><li>执行方法<br>对象.属性<br>对象.方法名()<br>总结：</li></ul><ol><li>static修饰的成员方法叫什么?如何使用?</li></ol><ul><li>类方法(静态方法)</li><li>属于类，可以直接用类名访问，也可以用对象访问<br>使用：类名.类方法</li></ul><ol start="2"><li>无static修饰的成员方法叫什么?如何使用?</li></ol><ul><li>实例方法(对象的方法)</li><li>属于对象，只能用对象访问<br>使用方法：对象.实例方法</li></ul><blockquote><p>注意事项</p><ul><li>类方法中可以直接访问类的成员，不可以直接访问实例成员。</li><li>实例方法中既可以直接访问类成员，也可以直接访问实例成员。</li><li>实例方法中可以出现this关键字，类方法中不可以出现this关键字的。</li></ul></blockquote><h3 id="代码块">代码块</h3><p>代码块是类的5大成分之一(成员变量、构造器、方法、代码块、内部类)<br>代码块分为两种:</p><ol><li>静态代码块:<br>格式:static{}<br>特点:类加载时自动执行，由于类只会加载一次，所以静态代码块也只会执行一次。<br>作用:完成类的初始化，例如:对类变量的初始化赋值。</li><li>实例代码块:<br>格式:{}<br>特点:每次创建对象时，执行实例代码块，并在构造器前执行。<br>作用:和构造器一样，都是用来完成对象的初始化的，例如:对实例变量进行初始化赋值。</li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Java </tag>
+            <tag> 面试 </tag>
             
         </tags>
       
@@ -245,6 +295,31 @@
     
     
     <entry>
+      <title>Java基础</title>
+      <link href="/posts/a03a840d.html"/>
+      <url>/posts/a03a840d.html</url>
+      
+        <content type="html"><![CDATA[<h1>Java基础</h1><h2 id="面向对象">面向对象</h2><ul><li>所谓的面向对象，其实就是分析问题时，以问题所涉及到的事或物为中心的分析方式<br>类和对象:</li><li>类表示归纳和整理</li><li>对象就表示具体的事物</li></ul><h3 id="类的创建过程">类的创建过程</h3><ul><li>先声明类</li><li>创建对象</li><li>声明网性，所说的属性其实就是类中的变最变航类型变航名称 =变值属性类型性名称 = 属性値</li><li>声明方法</li><li>void 方法名(参数){ 功能代码 }</li><li>执行方法<br>对象.属性<br>对象.方法名()<br>总结：</li></ul><ol><li>static修饰的成员方法叫什么?如何使用?</li></ol><ul><li>类方法(静态方法)</li><li>属于类，可以直接用类名访问，也可以用对象访问<br>使用：类名.类方法</li></ul><ol start="2"><li>无static修饰的成员方法叫什么?如何使用?</li></ol><ul><li>实例方法(对象的方法)</li><li>属于对象，只能用对象访问<br>使用方法：对象.实例方法</li></ul><blockquote><p>注意事项</p><ul><li>类方法中可以直接访问类的成员，不可以直接访问实例成员。</li><li>实例方法中既可以直接访问类成员，也可以直接访问实例成员。</li><li>实例方法中可以出现this关键字，类方法中不可以出现this关键字的。</li></ul></blockquote><h3 id="代码块">代码块</h3><p>代码块是类的5大成分之一(成员变量、构造器、方法、代码块、内部类)<br>代码块分为两种:</p><ol><li>静态代码块:<br>格式:static{}<br>特点:类加载时自动执行，由于类只会加载一次，所以静态代码块也只会执行一次。<br>作用:完成类的初始化，例如:对类变量的初始化赋值。</li><li>实例代码块:<br>格式:{}<br>特点:每次创建对象时，执行实例代码块，并在构造器前执行。<br>作用:和构造器一样，都是用来完成对象的初始化的，例如:对实例变量进行初始化赋值。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Mysql知识点</title>
       <link href="/posts/7ba7061.html"/>
       <url>/posts/7ba7061.html</url>
@@ -270,31 +345,6 @@
     
     
     <entry>
-      <title>算法</title>
-      <link href="/posts/1e7ff688.html"/>
-      <url>/posts/1e7ff688.html</url>
-      
-        <content type="html"><![CDATA[<h1>算法思维培养</h1><h2 id="算法题收集">算法题收集</h2><p>1.给你一个数组 <code>nums</code> 和一个值 <code>val</code>，你需要 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a></strong> 移除所有数值等于 <code>val</code> 的元素，并返回移除后数组的新长度。不要使用额外的数组空间，你必须仅使用 <code>O(1)</code> 额外空间并 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地 </a>修改输入数组</strong>。元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//双指针模型</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">//private int[] nums = &#123;3,2,2,3&#125;;</span></span><br><span class="line">    <span class="comment">//private int val = 3;</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (right &lt; nums.length)&#123;</span><br><span class="line">         <span class="keyword">if</span> (nums[right] == val) &#123;</span><br><span class="line">         right++;</span><br><span class="line">         <span class="keyword">continue</span>;      </span><br><span class="line">         &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">             nums[left] = nums[right];</span><br><span class="line">             left++;</span><br><span class="line">             &#125;</span><br><span class="line">         right++;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">return</span> left;   </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 算法之路 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 算法 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>谈天说地</title>
       <link href="/posts/93c91d94.html"/>
       <url>/posts/93c91d94.html</url>
@@ -312,56 +362,6 @@
         <tags>
             
             <tag> 谈天说地 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>面试题总结</title>
-      <link href="/posts/a80ea308.html"/>
-      <url>/posts/a80ea308.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="面试之道">面试之道</h2><h3 id="项目相关">项目相关</h3><h4 id="详细说明你的项目">详细说明你的项目</h4><blockquote><p>从以下几个方面进行项目介绍<br>1、项目的背景，包括:是自研还是外包、什么业务、服务的客户群是谁、谁去运营等问题<br>2、项目的业务流程<br>3、项目的功能模块<br>4、项目的技术架构<br>5、个人工作职责<br>6、个人负责模块的详细说明，包括模块的设计，所用到的技术，技术的实现方案等</p></blockquote><p>案例：</p><p>我最近参与的项目是我们公司自研的专门针对成人职业技能教育的网络课堂系统，网站提供了成人职业技能培训的相关课程，如:软件开发培训、职业资格证书培训、成人学历教育培训等课程。项目基于B2B2C的业务模式，培训机构可以在平台入驻、发布课程，我们公司作为运营方由专门的人员对发布的课程进行审核，审核通过后课程才可以发布成功，课程包括免费和收费两种形式，对于免费课程普通用户可以直接选课学习，对于收课程在选课后需要支付成功才可以继续学习。<br>本项目包括三个端:用户端(学生端)、机构端、运营端。<br>核心模块包括:内容管理、媒资管理、课程搜索、订单支付、选课管理、认证授权等。<br>本项目采用前后端分离架构，后端采用SpringBoot、springCloud技术栈开发，数据库使用了MySQL，还使用的Redis、消息队列、分布式文件系统、Elasticsearch等中间件系统。<br>划分的微服务包括:内容管理服务、媒资管理服务、搜索服务、订单支付服务、学习中心服务、系统管理服务认证授权服务、网关服务、注册中心服务、配置中心服务等。<br>我在这个项目中负责了内容管理、媒资管理、订单支付模块的设计与开发。</p><p>内容管理模块，是对平台上的课程进行管理，课程的相关信息比较多这里在数据库设计了课程基本信息表、课程营销表、课程计划、课程师资表进行存储，培训机构要发布一门课程需要填写课程基本信息、课程营销信息、课程计划信息、课程师资信息，填写完毕后需要提交审核，由运营人员进行课程信息的审核，整个审核过程是程序自动审核加人工确认的方式，通常24小时审核完成。课程审核通过即可发布课程，课程的相关信息会聚合到课程发布表中，这里不仅要将课程信息写到课程发布表还要将课程信息写到索引库、分布式文件系统中，所以这里存在分布式事务的问题，项目使用本地消息表加任务调度的方式去解决这里的分布式事务，保存数据的最终一致性。</p><h4 id="你的项目流程是什么">你的项目流程是什么</h4><ol><li>产品人员设计产品原型。</li><li>讨论需求。</li><li>分模块设计接口。</li><li>出接口文档。</li><li>将接口文档给到前端人员，前后端分离开发。</li><li>开发完毕进行测试。</li><li>测试完毕发布项目，由运维人员进行部署安装。</li></ol><h3 id="Git">Git</h3><h4 id="Git代码冲突怎么处理">Git代码冲突怎么处理</h4><p>我们在使用Git时难免会出现代码冲突的问题，出现冲突的原因是因为当本地文件的版本与目标分支中文件的版本不一致时当存在同一行的内容不同时在进行合并时会出现冲突。<br>代码冲突一般发生在以下情况:<br>1、多个分支向主分支合并时<br>2、同一个分支下pull或push操作时。</p><p>不使用图形化界面工具，我们要手动合并文件的内容，确定最终的版本</p><h4 id="你是在哪个开发分支">你是在哪个开发分支</h4><p>我们不是直接在主分支开发，由技术经理创建独立的开发分支，我们是在独立的开发分支中进行开发，最后由技术经理将开发分支合并到主分支。</p><h3 id="maven">maven</h3><h4 id="maven常用命令">maven常用命令</h4><ul><li>mvn clean //清除target目录中的生成结果</li><li>mvn compile //编译源代码</li><li>mvn test //执行单元测试</li><li>mvn package //打包</li><li>mvn install //打包并把打好的包上传到本地仓库</li><li>mvn deploy //打包并把打好的包上传到远程仓库</li></ul><h4 id="maven依赖版本冲突如何处理">maven依赖版本冲突如何处理</h4><p>maven依赖版本冲突一般是由于间接依赖导致一个jar包即有多个不同的版本，比如:A依赖了B的1.0版本，C依赖了B的2.0版本，项目依赖A和C从而间接依赖了B的1.0和2.0版本，此时B有两个版本引入到了项目中，当存在版本冲突时可能会出现ClassNotFoundException、NoSuchMethodError等错误。<br>处理版本冲突可以使用以下方法:<br>1、使用exclusions 排除依赖<br>比如:我们只依赖B的1.0版本，此时可以在依赖C时排除对B的依赖。<br>2、使用dependencyManagement锁定版本号。<br>通常在父工程对依赖的版本统一管理。<br>比如:我们只依赖B的1.0版本，此时可以在父工程中限定B的版本为1.0。</p><h3 id="Mysql">Mysql</h3><h4 id="mysql常见的存储引擎以及区别">mysql常见的存储引擎以及区别</h4><p>一、InnoDB</p><ol><li>支持事务。</li><li>使用的锁粒度默认为行级锁，可以支持更高的并发;也支持表锁。</li><li>支持外键约束;外键约束其实降低了表的查询速度，增加了表之间的耦合度。</li></ol><p>二、MyISAM</p><ol><li>不提供事务支持</li><li>只支持表级锁</li><li>不支持外键</li></ol><p>三、memory</p><ol><li>数据存储在内存中</li></ol><p>总结:</p><ul><li><p>MyISAM管理非事务表，提供高速存储和检索以及全文搜索能力，如果在应用中执行大量select操作，应该选择MyISAMM</p></li><li><p>InnoDB用于事务处理，具有ACID事务支持等特性，如果在应用中执行大量insert和update操作，应该选择InnoDB</p></li></ul><h4 id="mysql建表时要注意哪些">mysql建表时要注意哪些</h4><p>MySQL建表的经验有很多，下边列举一些:</p><ol><li>注意选择存储引擎，如果要支持事务需要选择InnoDB。</li><li>注意字段类型的选择，对于日期类型如果要记录时分秒建议使用datetime，只记录年月日使用date类型，对于字符类型的选择，固定长度字段选择char，不固定长度的字段选择varchar，varchar比char节省空间但速度没有char快;对于内容介绍类的长广文本字段使用text或longtext类型;如果存储图片等二进制数据使用blob或longblob类型;对金额字段建议使用DECIMAL;对于数值类型的字段在确保取值范围足够的前提下尽量使用占用空间较小的类型，</li><li>主键字段建议使用自然主键，不要有业务意义，建议使用int unsigned类型，特殊场景使用bigint类型。</li><li>如果要存储text、blob字段建议单独建一张表，使用外键关联。</li><li>尽量不要定义外键，保证表的独立性，可以存在外键意义的字段。</li><li>设置字段默认值，比如:状态、创建时间等。</li><li>每个字段写清楚注释。</li><li>注意字段的约束，比如:非空、唯一、主键等</li></ol><h3 id="Spring-boot">Spring boot</h3><h4 id="springBoot接口开发的常用注解有哪些">springBoot接口开发的常用注解有哪些?</h4><ul><li>@Controller 标记此类是一个控制器，可以返回视图解析器指定的html页面，通过@ResponseBody可以将结果返回json、xml数据。</li><li>@RestController相当于@ResponseBody加 @Controler，实现rest接口开发，返回json数据，不能返回html页面。</li><li>@RequestMapping定义接口地址，可以标记在类上也可以标记在方法上，支持http的post、put、get等方法。</li><li>@PostMapping定义post接口，只能标记在方法上，用于添加记录，复杂条件的查询接口。</li><li>@GetMapping定义get接口，只能标记在方法上，用于查询接口的定义。</li><li>@PutMapping定义put接口，只能标记在方法上，用于修改接口的定义。</li><li>@DeleteMapping定义delete接口，只能标记在方法上，用于除接口的定义。</li><li>@RequestBody定义在方法上，用于将json串转成java对象。</li><li>@PathVarible 接收请求路径中占位符的值.</li><li>@ApiOperation swagger注解，对接口方法进行说明。</li><li>@Api wagger注解，对接口类进行说明。</li><li>@Autowired 基于类型注入。</li><li>@Resourc基于名称注入，如果基于名称注入失败转为基于类型注入。</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试题 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 面试 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>谈谈Redis</title>
-      <link href="/posts/2a063794.html"/>
-      <url>/posts/2a063794.html</url>
-      
-        <content type="html"><![CDATA[<p>我是帅哥</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据库 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Redis </tag>
             
         </tags>
       
