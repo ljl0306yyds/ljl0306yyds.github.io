@@ -3,12 +3,14 @@ $.ajax({
     type: 'get',
     url: 'https://apis.map.qq.com/ws/location/v1/ip',
     data: {
-        key: 'BUJBZ-Y32CU-75NVT-G5U72-WG72Q-MEFHK',
+        key: 'DJHBZ-CCZEQ-BXU5F-4CFO6-6D5TK-DRFLB',
         output: 'jsonp',
     },
     dataType: 'jsonp',
     success: function (res) {
+        console.log(res);
         ipLoacation = res;
+        console.log(ipLoacation);
         showWelcome();
     }
 })
