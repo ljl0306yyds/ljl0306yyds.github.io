@@ -207,12 +207,12 @@ function showWelcome() {
     //根据本地时间切换欢迎语
     let timeChange;
     let date = new Date();
-    if (date.getHours() >= 5 && date.getHours() < 11) timeChange = "<span>上午好</span>，一日之计在于晨！";
-    else if (date.getHours() >= 11 && date.getHours() < 13) timeChange = "<span>中午好</span>，该摸鱼吃午饭了。";
-    else if (date.getHours() >= 13 && date.getHours() < 15) timeChange = "<span>下午好</span>，睡个午觉吧，中午小睡，下午精神百倍。";
+    if (date.getHours() >= 5 && date.getHours() < 11) timeChange = "<span>上午好呀</span>，一日之计在于晨！";
+    else if (date.getHours() >= 11 && date.getHours() < 13) timeChange = "<span>中午好呀</span>，该摸鱼吃午饭了。";
+    else if (date.getHours() >= 13 && date.getHours() < 15) timeChange = "<span>下午好呀</span>，午休时间到。";
     else if (date.getHours() >= 15 && date.getHours() < 16) timeChange = "<span>三点几啦</span>，一起饮茶呀！";
     else if (date.getHours() >= 16 && date.getHours() < 19) timeChange = "<span>夕阳无限好，只是近黄昏</span>";
-    else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<span>晚上好</span>，PUBG启动！";
+    else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<span>晚上好呀</span>，PUBG启动！";
     else timeChange = "夜深了，早点休息，少熬夜。";
 
     try {
