@@ -189,29 +189,6 @@
   </entry>
   
   <entry>
-    <title>CentOS部署RabbitMQ</title>
-    <link href="https://blog.itddey.asia/posts/17ff1682.html"/>
-    <id>https://blog.itddey.asia/posts/17ff1682.html</id>
-    <published>2024-01-15T10:00:00.000Z</published>
-    <updated>2024-04-24T14:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1>RabbitMQ部署指南</h1><h1>1.单机部署</h1><p>我们在Centos7虚拟机中使用Docker来安装。</p><h2 id="1-1-下载镜像">1.1.下载镜像</h2><p>方式一：在线拉取</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull rabbitmq:3-management</span><br></pre></td></tr></table></figure><p>方式二：从本地加载</p><p>在课前资料已经提供了镜像包：</p><p><img src="assets/image-20210423191210349.png" alt="image-20210423191210349"></p><p>上传到虚拟机中后，使用命令加载镜像即可：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker load -i mq.tar</span><br></pre></td></tr></table></figure><h2 id="1-2-安装MQ">1.2.安装MQ</h2><p>执行下面的命令来运行MQ容器：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line"> -e RABBITMQ_DEFAULT_USER=iTddey \</span><br><span class="line"> -e RABBITMQ_DEFAULT_PASS=123321 \</span><br><span class="line"> --name mq \</span><br><span class="line"> --hostname mq1 \</span><br><span class="line"> -p 15672:15672 \</span><br><span class="line"> -p 5672:5672 \</span><br><span class="line"> -d \</span><br><span class="line"> rabbitmq:latest</span><br></pre></td></tr></table></figure><h1>2.集群部署</h1><p>接下来，我们看看如何安装RabbitMQ的集群。</p><h2 id="2-1-集群分类">2.1.集群分类</h2><p>在RabbitMQ的官方文档中，讲述了两种集群的配置方式：</p><ul><li>普通模式：普通模式集群不进行数据同步，每个MQ都有自己的队列、数据信息（其它元数据信息如交换机等会同步）。例如我们有2个MQ：mq1，和mq2，如果你的消息在mq1，而你连接到了mq2，那么mq2会去mq1拉取消息，然后返回给你。如果mq1宕机，消息就会丢失。</li><li>镜像模式：与普通模式不同，队列会在各个mq的镜像节点之间同步，因此你连接到任何一个镜像节点，均可获取到消息。而且如果一个节点宕机，并不会导致数据丢失。不过，这种方式增加了数据同步的带宽消耗。</li></ul><p>我们先来看普通模式集群。</p><h2 id="2-2-设置网络">2.2.设置网络</h2><p>首先，我们需要让3台MQ互相知道对方的存在。</p><p>分别在3台机器中，设置 /etc/hosts文件，添加如下内容：</p><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">192.168.150.101</span> mq1</span><br><span class="line"><span class="number">192.168.150.102</span> mq2</span><br><span class="line"><span class="number">192.168.150.103</span> mq3</span><br></pre></td></tr></table></figure><p>并在每台机器上测试，是否可以ping通对方：</p>]]></content>
-    
-    
-    <summary type="html">单点以及集群部署RabbitMQ教程</summary>
-    
-    
-    
-    <category term="微服务" scheme="https://blog.itddey.asia/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-    
-    <category term="微服务" scheme="https://blog.itddey.asia/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-    <category term="RabbitMQ" scheme="https://blog.itddey.asia/tags/RabbitMQ/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Centos7安装Nacos教程</title>
     <link href="https://blog.itddey.asia/posts/4eb76220.html"/>
     <id>https://blog.itddey.asia/posts/4eb76220.html</id>
@@ -231,6 +208,29 @@
     <category term="微服务" scheme="https://blog.itddey.asia/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
     <category term="Nacos" scheme="https://blog.itddey.asia/tags/Nacos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS部署RabbitMQ</title>
+    <link href="https://blog.itddey.asia/posts/17ff1682.html"/>
+    <id>https://blog.itddey.asia/posts/17ff1682.html</id>
+    <published>2024-01-15T10:00:00.000Z</published>
+    <updated>2024-04-24T14:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1>RabbitMQ部署指南</h1><h1>1.单机部署</h1><p>我们在Centos7虚拟机中使用Docker来安装。</p><h2 id="1-1-下载镜像">1.1.下载镜像</h2><p>方式一：在线拉取</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull rabbitmq:3-management</span><br></pre></td></tr></table></figure><p>方式二：从本地加载</p><p>在课前资料已经提供了镜像包：</p><p><img src="assets/image-20210423191210349.png" alt="image-20210423191210349"></p><p>上传到虚拟机中后，使用命令加载镜像即可：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker load -i mq.tar</span><br></pre></td></tr></table></figure><h2 id="1-2-安装MQ">1.2.安装MQ</h2><p>执行下面的命令来运行MQ容器：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line"> -e RABBITMQ_DEFAULT_USER=iTddey \</span><br><span class="line"> -e RABBITMQ_DEFAULT_PASS=123321 \</span><br><span class="line"> --name mq \</span><br><span class="line"> --hostname mq1 \</span><br><span class="line"> -p 15672:15672 \</span><br><span class="line"> -p 5672:5672 \</span><br><span class="line"> -d \</span><br><span class="line"> rabbitmq:latest</span><br></pre></td></tr></table></figure><h1>2.集群部署</h1><p>接下来，我们看看如何安装RabbitMQ的集群。</p><h2 id="2-1-集群分类">2.1.集群分类</h2><p>在RabbitMQ的官方文档中，讲述了两种集群的配置方式：</p><ul><li>普通模式：普通模式集群不进行数据同步，每个MQ都有自己的队列、数据信息（其它元数据信息如交换机等会同步）。例如我们有2个MQ：mq1，和mq2，如果你的消息在mq1，而你连接到了mq2，那么mq2会去mq1拉取消息，然后返回给你。如果mq1宕机，消息就会丢失。</li><li>镜像模式：与普通模式不同，队列会在各个mq的镜像节点之间同步，因此你连接到任何一个镜像节点，均可获取到消息。而且如果一个节点宕机，并不会导致数据丢失。不过，这种方式增加了数据同步的带宽消耗。</li></ul><p>我们先来看普通模式集群。</p><h2 id="2-2-设置网络">2.2.设置网络</h2><p>首先，我们需要让3台MQ互相知道对方的存在。</p><p>分别在3台机器中，设置 /etc/hosts文件，添加如下内容：</p><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">192.168.150.101</span> mq1</span><br><span class="line"><span class="number">192.168.150.102</span> mq2</span><br><span class="line"><span class="number">192.168.150.103</span> mq3</span><br></pre></td></tr></table></figure><p>并在每台机器上测试，是否可以ping通对方：</p>]]></content>
+    
+    
+    <summary type="html">单点以及集群部署RabbitMQ教程</summary>
+    
+    
+    
+    <category term="微服务" scheme="https://blog.itddey.asia/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+    
+    <category term="微服务" scheme="https://blog.itddey.asia/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+    <category term="RabbitMQ" scheme="https://blog.itddey.asia/tags/RabbitMQ/"/>
     
   </entry>
   
